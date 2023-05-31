@@ -1,0 +1,41 @@
+
+.horizontal-slider {
+    width:88%;
+}
+
+.horizontal-slider .example-track {
+    height:7px;
+    top:20px;
+    border-radius: 10px;
+    border: 1px solid rgb(62, 62, 240);
+}
+.example-track.example-track-0 {
+    background: white;
+    
+}
+
+.example-track.example-track-1 {
+    background: rgb(62, 62, 240);
+}
+
+.example-track.example-track-2 {
+    background: white;
+}
+
+.horizontal-slider .example-thumb {
+    top: 16px;
+    width:15px;
+    height: 15px;
+    line-height: 38px;
+    /* font-size: 0.9rem; */
+    background-color:rgb(235, 232, 232);
+    color: rgb(207, 69, 69);
+    cursor: pointer;
+    /* border: 5px solid gray; */
+    /* box-sizing: border-box; */
+    border-radius: 50%;
+    outline: none;
+}
+
+
+
