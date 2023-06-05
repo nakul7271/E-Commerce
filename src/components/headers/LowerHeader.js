@@ -26,7 +26,7 @@ const LowerHeader = () => {
   const stickNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      windowHeight > 280 ? setStickyClass('fixed top-0 left-0 z-10 bg-white shadow-lg animate-fade-in-down-nav origin-top w-full ') : setStickyClass('relative');
+      windowHeight > 280 ? setStickyClass('fixed top-0 left-0 z-10 bg-white shadow-lg animate-fade-in-down-nav hidden lg:block origin-top w-full ') : setStickyClass('relative');
     }
   };
 

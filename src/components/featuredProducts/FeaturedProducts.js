@@ -6,6 +6,7 @@ import Products from "./Product";
 import { useRef } from "react";
 
 var settings = {
+  arrows:false,
   infinite: true,
   slidesToShow: 3,
   speed: 1000,
@@ -47,14 +48,14 @@ const FeaturedProducts = () => {
 
             <div className="flex lg:hidden">
               <button
-                className="text-4xl text-gray-400 mr-2 "
+                className="text-3xl text-gray-400 mr-2 "
                 onClick={() => slider?.current?.slickPrev()}
               >
                 {" "}
                 &#8249;{" "}
               </button>
               <button
-                className="text-4xl text-gray-400 "
+                className="text-3xl text-gray-400 "
                 onClick={() => slider?.current?.slickNext()}
               >
                 &#8250;

@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
-import Products from "../featuredProducts/Product";
 import ReactPaginate from "react-paginate";
-import "./Pagination.css";
-import ShopCard from "./ShopCard";
+import "../../shop/Pagination.css";
+import ReviewCard from "./ReviewCard";
 
-
-const PaginatedItems = (props) => {
-  const { data, Classes, grid } = props;
+const ReviewPagination = (props) => {
+  const { data } = props;
   const [itemOffset, setItemOffset] = useState(0);
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
-  const itemsPerPage = 12;
+  const itemsPerPage = 5;
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -25,36 +23,16 @@ const PaginatedItems = (props) => {
 
   return (
     <>
-      {grid&&<div className={Classes}>
-        {currentItems.map((product) => {
-          return (
-            <Products
-              para={product.para}
-              prize1={product.prize1}
-              prize2={product.prize2}
-              url1={product.url1}
-              url2={product.url2}
-            />
-          );
-        })}
-          </div>}
-          {!grid&& (
-        <div className={Classes}>
-          {currentItems.map((product) => {
-            return (
-              <ShopCard
-                para={product.para}
-                prize1={product.prize1}
-                prize2={product.prize2}
-                url1={product.url1}
-                url2={product.url2}
-                description={product.description}
-                availability={product.availability}
-              />
-            );
-          })}
-        </div>
-      )}
+      {currentItems.map((review) => {
+        return (
+          <ReviewCard
+            url={review.url}
+            name={review.name}
+            star={review.star}
+            message={review.message}
+          />
+        );
+      })}
       <ReactPaginate
         breakLabel="..."
         nextLabel=">"
@@ -73,4 +51,4 @@ const PaginatedItems = (props) => {
   );
 };
 
-export default PaginatedItems;
+export default ReviewPagination;

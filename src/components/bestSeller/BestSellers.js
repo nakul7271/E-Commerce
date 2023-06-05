@@ -7,6 +7,7 @@ import { useRef } from "react";
 import BestSellerCard from "./BestSellerCard";
 
 var settings = {
+  arrows:false,
   infinite: true,
   slidesToShow: 2,
   speed: 1000,

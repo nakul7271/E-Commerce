@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 
-const ShopHeader = () => {
+const ShopHeader = (props) => {
     return <>
     <div className="py-6 bg-gray-100">
         <div className="mx-[5%] sm:mx[11%] md:mx-[12%] md:px-[12px] lg:mx-[2%] lg:px-[17px] xl:mx-[7%] xl:px-[20px]">
@@ -41,7 +41,7 @@ const ShopHeader = () => {
                 />
               </svg>
             </li>
-            <li className="text-blue-500" >Shop</li>
+            <li className="text-blue-500" >{props.heading03}</li>
           </ul>
         </div>
       </div>

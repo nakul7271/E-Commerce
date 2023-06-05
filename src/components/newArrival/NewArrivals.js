@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import Products from "../featuredProducts/Product";
 
 var settings = {
+  arrows:false,
   infinite: true,
   slidesToShow: 4,
   speed: 1000,
