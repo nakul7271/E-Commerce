@@ -18,7 +18,7 @@ const RangeSlider = () => {
         onChange={handleChange}
         className="w-64 h-1 rounded-full appearance-none bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
-      <span>100</span>
+      <span>100000</span>
     </div>
   );
 };

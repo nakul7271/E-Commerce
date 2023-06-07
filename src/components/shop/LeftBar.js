@@ -10,7 +10,7 @@ const LeftBar = (props) => {
 
   useEffect(() => {
     props.filterByRange(range);
-  }, [range, props]);
+  }, [range]);
 
   return (
     <>
@@ -124,9 +124,8 @@ const LeftBar = (props) => {
                   defaultValue={[0, 100000]}
                   min={0}
                   max={100000}
-                
                   minDistance={10}
-                  onChange={(range, index) => {
+                  onChange={(range) => {
                     setRange(range);
                   }}
                 />
@@ -140,10 +139,10 @@ const LeftBar = (props) => {
             <hr className="bg-gray-700 w-[100%] mt-[15px]"></hr>
           </div>
           <div className="mt-8">
-            <button className="border text-slate-600 border-gray-300 rounded-2xl py-1 px-4 mr-3 hover:bg-blue-500 transition-all duration-500">
+            <button className="border text-slate-600 border-gray-300 rounded-2xl py-1 px-4 mr-3 hover:bg-blue-500 hover:text-white transition-all duration-500">
               Men
             </button>
-            <button className="border  text-slate-600 border-gray-300 rounded-2xl py-1 px-4 hover:bg-blue-500 transition-all duration-500">
+            <button className="border  text-slate-600 border-gray-300 rounded-2xl py-1 px-4 hover:bg-blue-500 hover:text-white transition-all duration-500">
               Women
             </button>
           </div>

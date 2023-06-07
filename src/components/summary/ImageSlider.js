@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./ImageSlider.css"
+import "./ImageSlider.css";
 
 const ImageSlider = () => {
   const settings = {
@@ -15,7 +15,7 @@ const ImageSlider = () => {
     },
     dots: true,
     dotsClass: "",
-    arrows:false,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -27,8 +27,7 @@ const ImageSlider = () => {
             margin: "10px",
             display: "flex",
             flexDirection: "row",
-                    justifyContent: "center",
-                    
+            justifyContent: "center",
           }}
         >
           {" "}

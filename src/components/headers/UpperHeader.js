@@ -20,9 +20,9 @@ const optionsLanguage = [
 ];
 
 const UpperHeader = () => {
-  const [account, setAccount] = useState("");
-  const [usd, setUsd] = useState("");
-  const [lang, setLang] = useState("");
+  const [account, setAccount] = useState("My Account");
+  const [usd, setUsd] = useState("USD $");
+  const [lang, setLang] = useState("English");
 
   const accountHandler = (event) => {
     setAccount(event.target.value);
@@ -53,21 +53,21 @@ const UpperHeader = () => {
               <ul className="flex">
                 <li className="mr-6 pr-6 border-r">
                   <Dropdown
-                    value="My Account"
+                    value={account}
                     options={optionsAccount}
                     onChange={accountHandler}
                   />
                 </li>
                 <li className="mr-6 pr-6 border-r">
                   <Dropdown
-                    value="USD $"
+                    value={usd}
                     options={optionsUSD}
                     onChange={usdHandler}
                   />
                 </li>
                 <li className="pr-6 border-r">
                   <Dropdown
-                    value="English"
+                    value={lang}
                     options={optionsLanguage}
                     onChange={langHandler}
                   />

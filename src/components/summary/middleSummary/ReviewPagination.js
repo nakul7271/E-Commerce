@@ -26,6 +26,7 @@ const ReviewPagination = (props) => {
       {currentItems.map((review) => {
         return (
           <ReviewCard
+            key={review.name}
             url={review.url}
             name={review.name}
             star={review.star}

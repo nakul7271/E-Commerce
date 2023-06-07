@@ -5,15 +5,18 @@ import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const optionsLearn = [
+  { label: "Learn More", value: "learnMore" },
   { label: "About", value: "about" },
   { label: "Cart", value: "cart" },
   { label: "Services", value: "services" },
   { label: "Blogs", value: "blogs" },
   { label: "Wishlist", value: "wishlist" },
+  
 ];
 
 const LowerHeader = () => {
   const [stickyClass, setStickyClass] = useState('relative');
+  // const navigate = useNavigate();
 
   useEffect(() => {
     window.addEventListener('scroll', stickNavbar);
@@ -30,11 +33,12 @@ const LowerHeader = () => {
     }
   };
 
-  const [learn, setLearn] = useState("");
+  const [learn, setLearn] = useState("Learn More");
   const [toggle, setToggle] = useState(false);
 
   const learnHandler = (event) => {
     setLearn(event.target.value);
+    // navigate("/" + learn);
     console.log(learn);
   };
 
@@ -89,7 +93,7 @@ const LowerHeader = () => {
               </li>
               <li id="learnMore" className="xl:mr-6 pr-6 py-4">
                 <Dropdown
-                  value="Learn More"
+                  value={learn}
                   options={optionsLearn}
                   onChange={learnHandler}
                 />
