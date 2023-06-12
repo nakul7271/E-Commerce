@@ -4,7 +4,6 @@ import ReactPaginate from "react-paginate";
 import "./Pagination.css";
 import ShopCard from "./ShopCard";
 
-
 const PaginatedItems = (props) => {
   const { data, Classes, grid } = props;
   const [itemOffset, setItemOffset] = useState(0);
@@ -25,20 +24,22 @@ const PaginatedItems = (props) => {
 
   return (
     <>
-      {grid&&<div className={Classes}>
-        {currentItems.map((product) => {
-          return (
-            <Products
-              para={product.para}
-              prize1={product.prize1}
-              prize2={product.prize2}
-              url1={product.url1}
-              url2={product.url2}
-            />
-          );
-        })}
-          </div>}
-          {!grid&& (
+      {grid && (
+        <div className={Classes}>
+          {currentItems.map((product) => {
+            return (
+              <Products
+                para={product.para}
+                prize1={product.prize1}
+                prize2={product.prize2}
+                url1={product.url1}
+                url2={product.url2}
+              />
+            );
+          })}
+        </div>
+      )}
+      {!grid && (
         <div className={Classes}>
           {currentItems.map((product) => {
             return (

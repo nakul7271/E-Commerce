@@ -30,7 +30,7 @@ const MainForm = () => {
           />
         </div>
         <input
-          className="xl:pl-10 xl:pr-20 lg:pl-3 lg:pr-6 sm:pl-10 sm:pr-20 pl-[1%] pr-[2%] focus:outline-0 sm:w-[55%] w-[70%] placeholder:text-[12px] sm:placeholder:text-base"
+          className="xl:pl-10 xl:pr-20  lg:pl-3 lg:pr-3 sm:pl-10 sm:pr-20 pl-[1%] pr-[2%] focus:outline-0 sm:w-[70%] w-[70%] placeholder:text-[12px] sm:placeholder:text-base"
           type="text"
           placeholder="Enter your search key..."
         />

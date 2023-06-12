@@ -30,7 +30,7 @@ const DummyCartItems = [
 const CartItems = () => {
   const tableRows = DummyCartItems.map((item) => {
     return (
-      <tr>
+      <tr key={item.url} >
         <td className="py-8 flex justify-center">
           <img className="w-[140px] " src={item.url} alt=""></img>
         </td>
@@ -70,9 +70,9 @@ const CartItems = () => {
               className="w-5 h-5 text-slate-600 hover:text-blue-600 cursor-pointer"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               />
             </svg>
           </div>
@@ -91,8 +91,12 @@ const CartItems = () => {
               <thead className="uppercase bg-gray-100 border-b border-slate-200">
                 <tr>
                   <th className="py-4 px-11 font-semibold">Image</th>
-                  <th className="py-4 px-11 font-semibold w-[220px] h-[24px]">Product Name</th>
-                  <th className="py-4 px-11 font-semibold w-[200px] h-[24px]">Until Price</th>
+                  <th className="py-4 px-11 font-semibold w-[220px] h-[24px]">
+                    Product Name
+                  </th>
+                  <th className="py-4 px-11 font-semibold w-[200px] h-[24px]">
+                    Until Price
+                  </th>
                   <th className="py-4 px-11 font-semibold">Qty</th>
                   <th className="py-4 px-11 font-semibold">Subtotal</th>
                   <th className="py-4 px-11 font-semibold">Action</th>
@@ -123,18 +127,18 @@ const CartItems = () => {
               <div className="md:flex w-full lg:w-2/3">
                 <div className="w-full md:w-1/2">
                   <div className="md:mr-4 rounded-md bg-gray-100 border border-slate-200">
-                    <CartItemsShippingBox/>
+                    <CartItemsShippingBox />
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 md:mt-0 mt-4">
                   <div className="md:mx-4 rounded-md bg-gray-100 border border-slate-200">
-                    <CartItemsCouponBox/>
+                    <CartItemsCouponBox />
                   </div>
                 </div>
               </div>
               <div className="w-full lg:mt-0 mt-4 lg:w-1/3">
                 <div className="lg:ml-4 rounded-md bg-gray-100 border border-slate-200">
-                  <CartItemsCartTotalBox/>
+                  <CartItemsCartTotalBox />
                 </div>
               </div>
             </div>

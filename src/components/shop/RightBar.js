@@ -1,9 +1,9 @@
 import React from "react";
 import SvgGrid, { SvgList } from "./SvgGrid";
 import Dropdown from "../dropdowns/Dropdown";
-import Products from "../featuredProducts/Product";
+// import Products from "../featuredProducts/Product";
 import { useState } from "react";
-import ShopCard from "./ShopCard";
+// import ShopCard from "./ShopCard";
 import PaginatedItems from "./Pagination";
 
 const optionsSort = [

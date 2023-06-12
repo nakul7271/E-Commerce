@@ -30,7 +30,7 @@ const BillingDetail = () => {
           id="createAccount"
           type="checkbox"
         />
-        <label className="ml-2" for="createAccount">
+        <label className="ml-2" htmlFor="createAccount">
           Create an account?
         </label>
       </div>
@@ -50,7 +50,7 @@ const BillingDetail = () => {
           id="shipping"
           type="checkbox"
         />
-        <label className="ml-2" for="shipping">
+        <label className="ml-2" htmlFor="shipping">
           Ship to a different address?
         </label>
       </div>

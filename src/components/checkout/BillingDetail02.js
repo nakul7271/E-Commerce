@@ -2,7 +2,7 @@ import React from "react";
 
 const BillingDetail02 = () => {
   return (
-    <div className="my-4 animate-fade-in-down ">
+    <div className="my-4 animate-fade-in-down origin-top ">
       <input
         className=" w-full py-2 px-6 border mt-1 border-slate-200 outline-none"
         type="text"

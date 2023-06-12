@@ -5,6 +5,10 @@ import ShopPage from "./pages/ShopPage";
 import SummaryPage from "./pages/SummaryPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import WishlistPage from "./pages/WishlistPage";
+import ContactUsPage from "./pages/ContactUsPage";
+import AccountPage from "./pages/AccountPage";
+import AuthenticationPage from "./pages/AuthenticationPage";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +21,11 @@ const router = createBrowserRouter([
       { path: "shop", element: <ShopPage /> },
       { path: "summary", element: <SummaryPage /> },
       { path: "cart", element: <CartPage /> },
-      {path: "checkout", element: <CheckoutPage/>}
+      { path: "checkout", element: <CheckoutPage /> },
+      { path: "wishlist", element: <WishlistPage /> },
+      { path: "contact", element: <ContactUsPage /> },
+      { path: "account", element: <AccountPage /> },
+      {path:"auth", element: <AuthenticationPage/> }
     ],
   },
 ]);

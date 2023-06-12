@@ -36,13 +36,13 @@ const LeftBar = (props) => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   className="w-4 h-4 "
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                   />
                 </svg>
@@ -51,10 +51,10 @@ const LeftBar = (props) => {
             {mensBar && (
               <div>
                 <ul className="p-1 text-slate-600 animate-fade-in-down">
-                  <li className="p-1 cursor-pointer hover:text-blue-500">
+                  <li id="#" className="p-1 cursor-pointer hover:text-blue-500">
                     Single
                   </li>
-                  <li className="p-1 cursor-pointer hover:text-blue-500 ">
+                  <li id="#" className="p-1 cursor-pointer hover:text-blue-500 ">
                     Bundle
                   </li>
                 </ul>
@@ -75,13 +75,13 @@ const LeftBar = (props) => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   className="w-4 h-4"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                   />
                 </svg>
@@ -90,10 +90,10 @@ const LeftBar = (props) => {
             {womensBar && (
               <div>
                 <ul className="p-1 text-slate-600 animate-fade-in-down">
-                  <li className="p-1 cursor-pointer hover:text-blue-500">
+                  <li id="#" className="p-1 cursor-pointer hover:text-blue-500">
                     Single
                   </li>
-                  <li className="p-1 cursor-pointer hover:text-blue-500">
+                  <li id="#" className="p-1 cursor-pointer hover:text-blue-500">
                     Bundle
                   </li>
                 </ul>

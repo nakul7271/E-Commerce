@@ -1,7 +1,7 @@
 import React from "react";
 
 import ReviewPagination from "./ReviewPagination";
-import Rate from "./Rate";
+// import Rate from "./Rate";
 import StarSvg from "../StarSvg";
 
 const DUMMY_REVIEWS = [

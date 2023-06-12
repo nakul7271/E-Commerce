@@ -19,7 +19,7 @@ const BillingDetail01 = () => {
     <div className="my-6">
       <div className="md:flex justify-between">
         <div className="md:w-[48%] w-full  flex flex-col">
-          <label for="inputFNId">First Name</label>
+          <label htmlFor="inputFNId">First Name</label>
           <input
             className=" w-full py-2 px-6 border mt-1 border-slate-200 outline-none"
             type="text"
@@ -28,7 +28,7 @@ const BillingDetail01 = () => {
           />
         </div>
         <div className="md:w-[48%] w-full flex flex-col">
-          <label for="inputLNId">Last Name</label>
+          <label htmlFor="inputLNId">Last Name</label>
           <input
             className=" w-full py-2 px-6 border mt-1 border-slate-200 outline-none"
             type="text"
@@ -38,7 +38,7 @@ const BillingDetail01 = () => {
         </div>
       </div>
       <div className="my-5 w-full flex flex-col">
-        <label for="companyName">Company Name</label>
+        <label htmlFor="companyName">Company Name</label>
         <input
           className=" w-full py-2 px-6 border mt-1 border-slate-200 outline-none"
           type="text"
@@ -47,7 +47,7 @@ const BillingDetail01 = () => {
         />
       </div>
       <div className="my-5 w-full flex flex-col">
-        <label for="countryName">Country</label>
+        <label htmlFor="countryName">Country</label>
         <div className=" w-full py-2 px-2 border mt-1 border-slate-200 outline-none">
           <Dropdown
             options={optionsCountry}
@@ -57,7 +57,7 @@ const BillingDetail01 = () => {
         </div>
       </div>
       <div className="my-5 w-full flex flex-col">
-        <label for="streetAddress">Street Address</label>
+        <label htmlFor="streetAddress">Street Address</label>
         <input
           className=" w-full py-2 px-6 border mt-1 border-slate-200 outline-none"
           type="text"
@@ -74,7 +74,7 @@ const BillingDetail01 = () => {
         />
       </div>
       <div className="my-5 w-full flex flex-col">
-        <label for="town">Town / City</label>
+        <label htmlFor="town">Town / City</label>
         <input
           className=" w-full py-2 px-6 border mt-1 border-slate-200 outline-none"
           type="text"
@@ -84,7 +84,7 @@ const BillingDetail01 = () => {
       </div>
       <div className="md:flex justify-between mt-4">
         <div className="md:w-[48%] w-full flex flex-col">
-          <label for="state">State / Country</label>
+          <label htmlFor="state">State / Country</label>
           <input
             className=" w-full py-2 px-6 border mt-1 border-slate-200 outline-none"
             type="text"
@@ -93,7 +93,7 @@ const BillingDetail01 = () => {
           />
         </div>
         <div className="md:w-[48%] w-full flex flex-col">
-          <label for="postCode">Postcode / ZIP</label>
+          <label htmlFor="postCode">Postcode / ZIP</label>
           <input
             className=" w-full py-2 px-6 border mt-1 border-slate-200 outline-none"
             type="text"
@@ -104,7 +104,7 @@ const BillingDetail01 = () => {
       </div>
       <div className="md:flex justify-between mt-4">
         <div className="md:w-[48%] w-full flex flex-col">
-          <label for="phone">Phone</label>
+          <label htmlFor="phone">Phone</label>
           <input
             className=" w-full py-2 px-6 border mt-1 border-slate-200 outline-none"
             type="text"
@@ -113,7 +113,7 @@ const BillingDetail01 = () => {
           />
         </div>
         <div className="md:w-[48%] w-full flex flex-col">
-          <label for="emailAddress">Email Address</label>
+          <label htmlFor="emailAddress">Email Address</label>
           <input
             className=" w-full py-2 px-6 border mt-1 border-slate-200 outline-none"
             type="text"
