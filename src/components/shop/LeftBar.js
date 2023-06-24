@@ -50,7 +50,7 @@ const LeftBar = (props) => {
             </div>
             {mensBar && (
               <div>
-                <ul className="p-1 text-slate-600 animate-fade-in-down">
+                <ul className="p-1 text-slate-600 animate-fade-in-down origin-top">
                   <li id="#" className="p-1 cursor-pointer hover:text-blue-500">
                     Single
                   </li>
@@ -89,7 +89,7 @@ const LeftBar = (props) => {
             </div>
             {womensBar && (
               <div>
-                <ul className="p-1 text-slate-600 animate-fade-in-down">
+                <ul className="p-1 text-slate-600 animate-fade-in-down origin-top">
                   <li id="#" className="p-1 cursor-pointer hover:text-blue-500">
                     Single
                   </li>

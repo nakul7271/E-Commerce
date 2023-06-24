@@ -1,6 +1,37 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../store/index";
+import { wishlistActions } from "../store/index";
 
 const Products = (props) => {
+  const dispatch = useDispatch();
+
+  const { id, productName, prize2, url1 } = props;
+
+  const addCartHandler = () => {
+    dispatch(
+      cartActions.addToCart({
+        id: id,
+        productName: productName,
+        price: prize2,
+        quantity: 1,
+        imageUrl: url1,
+      })
+    );
+  };
+
+  const addWishlistHandler = () => {
+    dispatch(
+      wishlistActions.addToWishlist({
+        id: id,
+        productName: productName,
+        price: prize2,
+        quantity: 1,
+        imageUrl: url1,
+      })
+    );
+  };
+
   return (
     <>
       <div>
@@ -42,24 +73,27 @@ const Products = (props) => {
                     id="#"
                     className="mr-2 text-slate-400 line-through text-xs py-[6px]"
                   >
-                    {props.prize1}
+                    ₹{props.prize1}
                   </li>
                   <li id="#" className="font-semibold">
-                    {props.prize2}
+                    ₹{props.prize2}
                   </li>
                 </ul>
               </div>
               <div></div>
             </div>
           </div>
-          <div className=" absolute z-[5] left-[28%] bottom-5 ">
-            <button className="hidden group-hover:block bg-blue-500 py-2 px-4 rounded-md text-white hover:bg-slate-700 transition-all duration-300 animate-fade-out">
+          <div className=" absolute z-[5]  flex justify-center w-full   bottom-5 ">
+            <button
+              onClick={addCartHandler}
+              className="hidden group-hover:block bg-blue-500 py-2 px-4 rounded-md text-white hover:bg-slate-700 transition-all duration-300 animate-fade-out"
+            >
               ADD TO CART
             </button>
           </div>
           <div className="absolute z-[5] right-2 top-2 hidden group-hover:block animate-fade-out">
             <ul className="text-slate-700">
-              <li className="p-2 m-2 bg-gray-300 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
+              <li id="1" className="cursor-pointer p-2 m-2 bg-gray-300 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -75,7 +109,7 @@ const Products = (props) => {
                   />
                 </svg>
               </li>
-              <li className="p-2 m-2 bg-gray-300 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
+              <li id="2" onClick={addWishlistHandler} className="cursor-pointer p-2 m-2 bg-gray-300 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -91,7 +125,7 @@ const Products = (props) => {
                   />
                 </svg>
               </li>
-              <li className="p-2 m-2 bg-gray-300 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
+              <li id="3" className="cursor-pointer p-2 m-2 bg-gray-300 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

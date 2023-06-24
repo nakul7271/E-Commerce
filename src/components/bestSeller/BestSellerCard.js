@@ -5,7 +5,7 @@ const BestSellerCard = (props) => {
     <>
       <div>
         <div className="mx-2 my-4">
-          <div className="rounded-md shadow hover:shadow-lg flex py-2 group">
+          <div className="rounded-md shadow hover:shadow-lg 0.8sm:flex py-2 group">
             <div className="relative w-[100%] ">
               <img className="w-full" src={props.url01} alt="tshirt1" />
               <img
@@ -66,7 +66,7 @@ const BestSellerCard = (props) => {
             </ul>
           </div>
             </div>
-            <div className="w-[100%]  p-4">
+            <div className="w-[100%] pt-4 0.8sm:pt-0 sm:pt-4 px-4 pb-4 text-center 0.8sm:text-left">
               <p className="text-slate-400 text-xs mb-2">
                 THE MINIMALIST COLLECTION
               </p>
@@ -77,7 +77,7 @@ const BestSellerCard = (props) => {
               </div>
               <p className="text-slate-600">{props.para}</p>
               <div className="py-3">
-                <ul className="flex ">
+                <ul className="flex justify-center 0.8sm:justify-start ">
                   <li id="#" className="mr-2 text-slate-400 line-through text-xs py-[6px]">
                     {props.prize1}
                   </li>

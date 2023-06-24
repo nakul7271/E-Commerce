@@ -1,15 +1,11 @@
 import React from "react";
 
-// "url(./images/topImg01.jpg)"
-// The Minimalist Collection
-// Ft. Shubham Semwal
-
 const SliderContent = (props) => {
   return (
     <>
       <div>
         <div
-          className="h-[300px] md:h-[360px] lg:h-[460px] w-full bg-cover bg-right"
+          className="h-[300px] md:h-[360px] lg:h-[460px] w-full bg-cover bg-right bg-color-burn"
           style={{ backgroundImage: props.url }}
         >
           <div
@@ -26,7 +22,7 @@ const SliderContent = (props) => {
                   {props.h102}
                 </h1>
                 <p className="mt-[25px] mb-[50px]  md:text-xl">{props.para}</p>
-                <button className="text-white" type="button">
+                <button className="text-white py-2 0.8sm:mb-0 0.5sm:mb-3 mb-6 px-6 rounded-md bg-blue-600 hover:bg-slate-900 transition-all duration-300" type="button">
                   SHOP NOW
                 </button>
               </div>

@@ -3,23 +3,24 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Sidebar = (props) => {
-
   const [toggleLearnMore, setToggleLearnMore] = useState(false);
 
   const learnMoreHandler = () => {
-    setToggleLearnMore((prev) => { return !prev });
-  }
+    setToggleLearnMore((prev) => {
+      return !prev;
+    });
+  };
 
   return (
-    <div>
+    <div className="lg:hidden">
       {props.showSidebar && <Backdrop onClose={props.onClose} />}
       <div
-        className={`top-0 left-0 sm:w-[35vw] w-[60%] bg-white border border-slate-200  p-10  text-white fixed h-full z-40 animate-fade-in-right origin-left ${
+        className={`top-0 left-0 w-[270px] 0.8sm:w-[300px] sm:w-[350px] bg-white border border-slate-200 overflow-y-auto p-10  text-white fixed h-full z-40 animate-fade-in-right origin-left ${
           props.showSidebar ? "translate-x-0 " : "translate-x-[-35vw]"
         }`}
       >
-        <div className="relative">
-          <button onClick={props.onClose} className="absolute right-0">
+        <div className=" flex justify-end">
+          <button onClick={props.onClose} className="">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -36,22 +37,36 @@ const Sidebar = (props) => {
             </svg>
           </button>
         </div>
-        <div className="mt-6">
-          <ul className="text-sm text-slate-700">
-            <li className="xl:mr-12 mr-6 py-4 cursor-pointer ">Home</li>
-            <li className="xl:mr-12 mr-6 py-4 cursor-pointer">Shop</li>
-            <li className="xl:mr-12 mr-6 py-4 cursor-pointer">Products</li>
-            <li
-              id="learnMore"
-              className="xl:mr-12 mr-6 py-4 cursor-pointer"
-            >
+        <hr className="w-full bg-slate-200 mt-2"></hr>
+        <div className="mt-6 uppercase">
+          <ul className="text-sm text-slate-500">
+            <li className="xl:mr-12 mr-6 py-4    ">
+              <Link
+                onClick={props.onClose}
+                className="hover:text-blue-500 transition-all duration-300"
+                to="/"
+              >
+                Home
+              </Link>
+            </li>
+            <li className="xl:mr-12 mr-6 py-4">
+              <Link
+                onClick={props.onClose}
+                className="hover:text-blue-500 transition-all duration-300"
+                to="/shop"
+              >
+                Shop
+              </Link>
+            </li>
+            <li className="xl:mr-12 mr-6 py-4 ">Products</li>
+            <li id="learnMore" className="xl:mr-12 mr-6 py-4  ">
               <button
                 onClick={learnMoreHandler}
-                className={`flex items-center hover:text-blue-500 transition-all duration-300 ${
+                className={`flex w-full justify-between hover:text-blue-500 transition-all uppercase duration-300 ${
                   toggleLearnMore ? "text-blue-500" : ""
                 } `}
               >
-                Learn More{" "}
+                <span>Learn More</span>
                 <span className="ml-2">
                   {" "}
                   <svg
@@ -70,59 +85,100 @@ const Sidebar = (props) => {
                   </svg>
                 </span>
               </button>
-              {toggleLearnMore&&<div
-                className="bg-white animate-fade-in-down origin-top"
-              >
-                <ul>
-                  <li
-                    id="men"
-                    className=" hover:text-blue-500 hover:pl-6 transition-all duration-300  border-slate-200  px-4 py-1"
-                  >
-                    About
-                  </li>
-                  <Link onClick={learnMoreHandler} to="cart">
-                    <li
-                      id="women"
-                      className=" hover:text-blue-500 hover:pl-6 transition-all duration-300 border-slate-200  px-4 py-1"
-                    >
-                      Cart
+              {toggleLearnMore && (
+                <div className="bg-white animate-fade-in-down origin-top capitalize">
+                  <ul>
+                    <li id="men" className="   border-slate-200  px-4 pt-4">
+                      <Link
+                        onClick={props.onClose}
+                        className="hover:text-blue-500 hover:pl-2 transition-all duration-300"
+                        to="/about"
+                      >
+                        About
+                      </Link>
                     </li>
-                  </Link>
 
-                  <li
-                    id="women"
-                    className=" hover:text-blue-500 hover:pl-6 transition-all duration-300 border-slate-200  px-4 py-1"
-                  >
-                    Services
-                  </li>
-                  <li
-                    id="women"
-                    className=" hover:text-blue-500 hover:pl-6 transition-all duration-300 border-slate-200  px-4 py-1"
-                  >
-                    Blogs
-                  </li>
-                  <Link onClick={learnMoreHandler} to="wishlist">
-                    <li
-                      id="women"
-                      className=" hover:text-blue-500 hover:pl-6 transition-all duration-300 border-slate-200  px-4 py-1"
-                    >
-                      Wishlist
+                    <li id="women" className="  border-slate-200  px-4 pt-4">
+                      <Link
+                        onClick={props.onClose}
+                        className="hover:text-blue-500 hover:pl-2 transition-all duration-300"
+                        to="/cart"
+                      >
+                        Cart
+                      </Link>
                     </li>
-                  </Link>
-                  <Link onClick={learnMoreHandler} to="checkout">
-                    <li
-                      id="women"
-                      className=" hover:text-blue-500 hover:pl-6 transition-all duration-300 border-slate-200  px-4 py-1"
-                    >
-                      Checkout
+
+                    <li id="women" className="  border-slate-200  px-4 pt-4">
+                      <Link
+                        onClick={props.onClose}
+                        className="hover:text-blue-500 hover:pl-2 transition-all duration-300"
+                        to="/compare"
+                      >
+                        Compare
+                      </Link>
                     </li>
-                  </Link>
-                </ul>
-              </div>}
+                    <li id="women" className="  border-slate-200  px-4 pt-4">
+                      <Link
+                        onClick={props.onClose}
+                        className="hover:text-blue-500 hover:pl-2 transition-all duration-300"
+                        to="/auth"
+                      >
+                        Login / Register
+                      </Link>
+                    </li>
+
+                    <li id="women" className="  border-slate-200  px-4 pt-4">
+                      <Link
+                        onClick={props.onClose}
+                        className="hover:text-blue-500 hover:pl-2 transition-all duration-300"
+                        to="/wishlist"
+                      >
+                        Wishlist
+                      </Link>
+                    </li>
+
+                    <li id="women" className="  border-slate-200  px-4 pt-4">
+                      <Link
+                        onClick={props.onClose}
+                        className="hover:text-blue-500 hover:pl-2 transition-all duration-300"
+                        to="/checkout"
+                      >
+                        Checkout
+                      </Link>
+                    </li>
+                    <li id="women" className="  border-slate-200  px-4 pt-4">
+                      <Link
+                        onClick={props.onClose}
+                        className="hover:text-blue-500 hover:pl-2 transition-all duration-300"
+                        to="/account"
+                      >
+                        Account
+                      </Link>
+                    </li>
+                    <li id="women" className="  border-slate-200  px-4 pt-4">
+                      <Link
+                        onClick={props.onClose}
+                        className="hover:text-blue-500 hover:pl-2 transition-all duration-300"
+                        to="/404error"
+                      >
+                        404 Page
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </li>
-            <li className="xl:mr-12 mr-6 py-4 cursor-pointer">Portfolio</li>
-            <li className="xl:mr-12 mr-6 py-4 cursor-pointer">Buy Samples</li>
-            <li className="xl:mr-12 mr-6 py-4 cursor-pointer">Contacts</li>
+            <li className="xl:mr-12 mr-6 py-4 ">Portfolio</li>
+            <li className="xl:mr-12 mr-6 py-4 ">Buy Samples</li>
+            <li className="xl:mr-12 mr-6 py-4 ">
+              <Link
+                onClick={props.onClose}
+                className="hover:text-blue-500 hover:pl-2 transition-all duration-300"
+                to="/contact"
+              >
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

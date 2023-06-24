@@ -29,6 +29,9 @@ const PaginatedItems = (props) => {
           {currentItems.map((product) => {
             return (
               <Products
+                key={product.id}
+                id={product.id}
+                productName={product.productName}
                 para={product.para}
                 prize1={product.prize1}
                 prize2={product.prize2}

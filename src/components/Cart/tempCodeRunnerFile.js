@@ -1,0 +1,1 @@
+<hr className="bg-slate-200"></hr>

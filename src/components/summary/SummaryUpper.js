@@ -1,17 +1,23 @@
 import React from "react";
 import ImageSlider from "./ImageSlider";
+// import { createPortal } from "react-dom";
 
 import SummaryUpper02 from "./SummaryUpper02";
 import SummaryUpper01 from "./SummaryUpper01";
 import SummaryUpper03 from "./SummaryUpper03";
 
 const SummaryUpper = () => {
+
+  // const imageEnlargedPortal = document.getElementById("overlays");
+
   return (
     <>
-      <div className="lg:flex lg:justify-between">
+      <div className="lg:flex lg:justify-between relative">
         <div className="lg:w-[45%] mb-10 lg:mb-0">
           <ImageSlider />
         </div>
+        {/* {createPortal(<div className="z-20 w-full" />, imageEnlargedPortal)} */}
+        {/* <div className="w-full z-20" id="qwerty"></div> */}
         <div className="border border-slate-200 rounded-md lg:w-[50%] ">
           <div className="py-8 px-4">
             <SummaryUpper01 />
@@ -23,15 +29,15 @@ const SummaryUpper = () => {
                 <ul className="flex mt-2">
                   <li
                     id="#"
-                    className="bg-black mr-5 shadow-2xl border hover:border-slate-800 w-8 h-8"
+                    className="bg-black mr-5 shadow-2xl border cursor-pointer hover:border-slate-800 w-8 h-8"
                   ></li>
                   <li
                     id="#"
-                    className="bg-white mr-5 shadow-2xl border hover:border-slate-800 w-8 h-8"
+                    className="bg-white mr-5 shadow-2xl border cursor-pointer hover:border-slate-800 w-8 h-8"
                   ></li>
                   <li
                     id="#"
-                    className="bg-blue-950 mr-5 shadow-2xl border hover:border-slate-800 w-8 h-8"
+                    className="bg-blue-950 mr-5 shadow-2xl border cursor-pointer hover:border-slate-800 w-8 h-8"
                   ></li>
                 </ul>
               </div>
@@ -40,25 +46,25 @@ const SummaryUpper = () => {
                 <ul className=" mt-3  text-slate-700 flex items-center">
                   <li
                     id="#"
-                    className="mr-5 font-semibold rounded-full border border-slate-600 px-3 py-1"
+                    className="mr-5 font-semibold rounded-full border cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300   border-slate-600 px-3 py-1"
                   >
                     S
                   </li>
                   <li
                     id="#"
-                    className="mr-5 text-white bg-blue-500 font-semibold rounded-full border border-slate-600 px-2 py-1"
+                    className="mr-5 text-white bg-blue-500 font-semibold rounded-full border cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300  border-slate-600 px-2 py-1"
                   >
                     M
                   </li>
                   <li
                     id="#"
-                    className="mr-5 font-semibold rounded-full border border-slate-600 px-3 py-1"
+                    className="mr-5 font-semibold rounded-full border cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300  border-slate-600 px-3 py-1"
                   >
                     L
                   </li>
                   <li
                     id="#"
-                    className="mr-5 font-semibold rounded-full border border-slate-600 px-2  py-[6px] text-sm "
+                    className="mr-5 font-semibold rounded-full border cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300  border-slate-600 px-2  py-[6px] text-sm "
                   >
                     XL
                   </li>
@@ -70,10 +76,10 @@ const SummaryUpper = () => {
                 </ul>
               </div>
               <div className="flex mt-6">
-                <button className="py-3 px-10 rounded-md border border-blue-500 mr-2 hover:text-white hover:bg-slate-900">
+                <button className="py-3 px-10 rounded-md border border-blue-500 mr-2 transition-all duration-300 hover:text-white hover:bg-slate-900">
                   ADD TO CART
                 </button>
-                <button className="py-3 px-10 rounded-md border border-blue-500 text-white hover:bg-slate-900 bg-blue-500">
+                <button className="py-3 px-10 rounded-md border border-blue-500 text-white transition-all duration-300 hover:bg-slate-900 bg-blue-500">
                   BUY NOW
                 </button>
               </div>

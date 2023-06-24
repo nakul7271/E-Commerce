@@ -12,7 +12,7 @@ const BottomSlidesCard = (props) => {
             className="w-[120px] absolute top-0 transition duration-500 opacity-0 hover:opacity-100"
           />
         </div>
-        <div className="w-[100%]  p-4">
+        <div className="w-[100%]  0.8sm:p-4 pt-0 pb-4 px-4">
           <p className="text-slate-600 capitalize">{props.para}</p>
           <div className="py-3 font-bold">{props.prize}</div>
         </div>

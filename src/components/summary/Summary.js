@@ -60,23 +60,48 @@ const Summary = () => {
           </div>
           <div>
             <div className="flex justify-between items-center mb-5">
-              <h2 className="text-2xl w-[800px] h-[24px]">12 Other Products In The Same Category:</h2>
+              <h2 className="sm:text-2xl w-[800px] h-[24px] text-lg mt-1 sm:mt-0">12 Other Products In The Same Category:</h2>
 
-              <hr className="bg-gray-700 w-full dark:bg-gray-700 mt-[15px]"></hr>
+              <hr className="bg-gray-700 lg:w-[88%] 1.5md:w-[35%] md:w-[20%] w-[27%] dark:bg-gray-700 mt-[15px]"></hr>
 
-              <div className="flex ">
+              <div className="flex mt-3 ">
                 <button
                   className="text-3xl text-gray-400 mr-2 "
                   onClick={() => slider?.current?.slickPrev()}
                 >
-                  {" "}
-                  &#8249;{" "}
+                 <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 19.5L8.25 12l7.5-7.5"
+                    />
+                  </svg>
                 </button>
                 <button
                   className="text-3xl text-gray-400 "
                   onClick={() => slider?.current?.slickNext()}
                 >
-                  &#8250;
+                 <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
                 </button>
               </div>
                       </div>

@@ -9,6 +9,11 @@ import WishlistPage from "./pages/WishlistPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import AccountPage from "./pages/AccountPage";
 import AuthenticationPage from "./pages/AuthenticationPage";
+import ErrorPage from "./pages/ErrorPage";
+import AboutPage from "./pages/AboutPage";
+import ComparePage from "./pages/ComparePage";
+
+
 
 const router = createBrowserRouter([
   {
@@ -25,7 +30,10 @@ const router = createBrowserRouter([
       { path: "wishlist", element: <WishlistPage /> },
       { path: "contact", element: <ContactUsPage /> },
       { path: "account", element: <AccountPage /> },
-      {path:"auth", element: <AuthenticationPage/> }
+      { path: "auth", element: <AuthenticationPage /> },
+      { path: "404error", element: <ErrorPage /> },
+      { path: "about", element: <AboutPage /> },
+      {path: "compare", element: <ComparePage/> }
     ],
   },
 ]);

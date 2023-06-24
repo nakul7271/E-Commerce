@@ -84,7 +84,9 @@ const LowerHeader = () => {
             <div className="">
               <ul className="flex text-sm">
                 <li id="home" className="xl:mr-12 mr-6 py-4 ">
-                  Home
+                <Link className="hover:text-blue-500" to="/">
+                    Home
+                  </Link>
                 </li>
                 <li id="shop" className="xl:mr-12 mr-6 py-4">
                   <Link className="hover:text-blue-500" to="/shop">
@@ -92,7 +94,9 @@ const LowerHeader = () => {
                   </Link>
                 </li>
                 <li id="products" className="xl:mr-12 mr-6 py-4">
-                  Products
+                <Link className="hover:text-blue-500" to="/summary">
+                    Summary
+                  </Link>
                 </li>
                 <li
                   id="learnMore"
@@ -131,12 +135,14 @@ const LowerHeader = () => {
                     }
                   >
                     <ul>
-                      <li
-                        id="men"
-                        className="border-t border-r border-l hover:text-blue-500 hover:pl-6 transition-all duration-300 border-b border-slate-200  px-4 py-3"
-                      >
-                        About
-                      </li>
+                    <Link onClick={learnMoreHandler} to="about">
+                        <li
+                          id="women"
+                          className="border-r border-l border-b hover:text-blue-500 hover:pl-6 transition-all duration-300 border-slate-200  px-4 py-3"
+                        >
+                          About
+                        </li>
+                      </Link>
                       <Link onClick={learnMoreHandler} to="cart">
                         <li
                           id="women"
@@ -146,12 +152,14 @@ const LowerHeader = () => {
                         </li>
                       </Link>
 
-                      <li
-                        id="women"
-                        className="border-r border-l border-b hover:text-blue-500 hover:pl-6 transition-all duration-300 border-slate-200  px-4 py-3"
-                      >
-                        Services
-                      </li>
+                      <Link onClick={learnMoreHandler} to="compare">
+                        <li
+                          id="women"
+                          className="border-r border-l border-b hover:text-blue-500 hover:pl-6 transition-all duration-300 border-slate-200  px-4 py-3"
+                        >
+                          Compare
+                        </li>
+                      </Link>
                       <Link onClick={learnMoreHandler} to="auth?mode=login">
                         <li
                           id="women"
@@ -182,6 +190,14 @@ const LowerHeader = () => {
                           className="border-r border-l border-b hover:text-blue-500 hover:pl-6 transition-all duration-300 border-slate-200  px-4 py-3"
                         >
                           Account
+                        </li>
+                      </Link>
+                      <Link onClick={learnMoreHandler} to="404error">
+                        <li
+                          id="women"
+                          className="border-r border-l border-b hover:text-blue-500 hover:pl-6 transition-all duration-300 border-slate-200  px-4 py-3"
+                        >
+                          404 Page
                         </li>
                       </Link>
                     </ul>
@@ -218,7 +234,7 @@ const LowerHeader = () => {
                   <div>BROWSE CATEGORIES</div>
                 </div>
 
-                <BiChevronDown className="mr-4 ml-8" />
+                <BiChevronDown className=" text-xl mr-4 ml-8" />
               </button>
               <div
                 className={
@@ -229,7 +245,7 @@ const LowerHeader = () => {
               >
                 <ul className="absolute w-full bg-white">
                   <li className="border border-slate-200  px-4 py-3">Men</li>
-                  <li className="border border-slate-200  px-4 py-3">Women</li>
+                  <li className="border-r border-l border-b border-slate-200  px-4 py-3">Women</li>
                 </ul>
               </div>
             </div>

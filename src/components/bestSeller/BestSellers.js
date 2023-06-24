@@ -38,19 +38,44 @@ const BestSeller = () => {
 
             <hr className="bg-gray-700 w-[40%] sm:w-[58%] md:w-[60%] lg:w-[78%] xl:w-[80%] dark:bg-gray-700 mt-[15px]"></hr>
 
-            <div className="flex">
+            <div className="flex mt-3">
               <button
                 className="text-4xl text-gray-400 mr-2 "
                 onClick={() => slider?.current?.slickPrev()}
               >
-                {" "}
-                &#8249;{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 19.5L8.25 12l7.5-7.5"
+                  />
+                </svg>
               </button>
               <button
                 className="text-4xl text-gray-400 "
                 onClick={() => slider?.current?.slickNext()}
               >
-                &#8250;
+               <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
               </button>
             </div>
           </div>
