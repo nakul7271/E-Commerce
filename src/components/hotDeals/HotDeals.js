@@ -21,7 +21,7 @@ const HotDeals = () => {
     <div>
       <div className="flex justify-between items-center mb-5">
         <h2 className="text-2xl w-60 h-[24px] ">Hot Deals</h2>
-        <div className="w-[80%] mr-2">
+        <div className=" w-[80%] md:w-[20%] lg:w-[80%] mr-2">
           <hr className="bg-gray-700 mt-[15px]"></hr>
         </div>
 
@@ -36,7 +36,7 @@ const HotDeals = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              class="w-4 h-4"
+              className="w-4 h-4"
             >
               <path
                 strokeLinecap="round"
@@ -55,7 +55,7 @@ const HotDeals = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              class="w-4 h-4"
+              className="w-4 h-4"
             >
               <path
                 strokeLinecap="round"

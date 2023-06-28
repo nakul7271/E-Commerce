@@ -23,27 +23,9 @@ var settings = {
         infinite: true,
       },
     },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        rows: 2,
-        slidesToScroll: 1,
-        infinite: true,
-      },
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 1,
-        rows: 2,
-        slidesToScroll: 1,
-        infinite: true,
-      },
-    },
 
     {
-      breakpoint: 1280,
+      breakpoint: 1024,
       settings: {
         slidesToShow: 2,
         rows: 2,
@@ -61,7 +43,7 @@ const FeaturedProducts = () => {
     <>
       <div className="mx-[5%] sm:mx[11%] md:mx-[12%] md:px-[12px] lg:mx-[2%] lg:px-[17px] xl:mx-[7%] xl:px-[20px]">
         <div className="md:flex">
-          <div className="w-full md:w-[50%] lg:w-[60%] xl:w-2/3">
+          <div className="w-full md:w-[65%] lg:w-[70%] xl:w-2/3">
             <div className="flex justify-between items-center mb-5">
               <h2 className="text-2xl w-60 h-[24px] ">Featured Products</h2>
               <div className="lg:w-[70%] 1.5md:w-[20%] md:w-[13%] 0.8sm:w-[45%] 0.5sm:w-[25%] w-[10%] mr-3">
@@ -79,7 +61,7 @@ const FeaturedProducts = () => {
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    class="w-4 h-4"
+                    className="w-4 h-4"
                   >
                     <path
                       strokeLinecap="round"
@@ -98,7 +80,7 @@ const FeaturedProducts = () => {
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    class="w-4 h-4"
+                    className="w-4 h-4"
                   >
                     <path
                       strokeLinecap="round"
@@ -186,9 +168,9 @@ const FeaturedProducts = () => {
               </Slider>
             </div>
           </div>
-          <div className="md:w-[50%] lg:w-[40%] xl:w-1/3">
+          <div className="md:w-[35%] lg:w-[30%] xl:w-1/3">
             <div className="w-full md:ml-3 lg:ml-8">
-              <HotDeals/>
+              <HotDeals />
             </div>
           </div>
         </div>

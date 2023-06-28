@@ -70,28 +70,28 @@ const HotDealsCard = (props) => {
             <div className="flex justify-center ">
               <span className="flex">
                 <div>
-                  <p className="text-4xl">0</p>
+                  <p className="text-4xl md:text-xl lg:text-4xl">0</p>
                   <p className="text-xs">DAYS</p>
                 </div>
-                <div className="text-4xl mx-2">:</div>
+                <div className="text-4xl md:text-xl lg:text-4xl mx-2">:</div>
               </span>
               <span className="flex">
                 <div>
-                  <p className="text-4xl">0</p>
+                  <p className="text-4xl md:text-xl lg:text-4xl">0</p>
                   <p className="text-xs">HOURS</p>
                 </div>
-                <div className="text-4xl mx-2">:</div>
+                <div className=" text-4xl md:text-xl lg:text-4xl mx-2">:</div>
               </span>
               <span className="flex">
                 <div>
-                  <p className="text-4xl">00</p>
+                  <p className="text-4xl md:text-xl lg:text-4xl">00</p>
                   <p className="text-xs">MINS</p>
                 </div>
-                <div className="text-4xl mx-2">:</div>
+                <div className="text-4xl md:text-xl lg:text-4xl mx-2">:</div>
               </span>
               <span className="flex">
                 <div>
-                  <p className="text-4xl">00</p>
+                  <p className="text-4xl md:text-xl lg:text-4xl">00</p>
                   <p className="text-xs">SEC</p>
                 </div>
               </span>
@@ -100,7 +100,7 @@ const HotDealsCard = (props) => {
           <div>
             <button
               onClick={addCartHandler}
-              className=" bg-blue-500 py-2 px-4 rounded-md text-white hover:bg-slate-700 transition-all duration-300 animate-fade-out"
+              className=" bg-blue-500 py-2 px-4 rounded-md text-white hover:bg-slate-900 transition-all duration-300 animate-fade-out"
             >
               ADD TO CART
             </button>

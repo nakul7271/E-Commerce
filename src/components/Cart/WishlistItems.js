@@ -8,7 +8,7 @@ const WishlistItems = () => {
   );
 
   const tableRows = wishlistItemsArray.map((item) => {
-    return <WishlistItemsRow item={item} />;
+    return <WishlistItemsRow key={item.id} item={item} />;
   });
 
   return (

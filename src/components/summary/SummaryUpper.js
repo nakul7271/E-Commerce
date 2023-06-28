@@ -1,23 +1,43 @@
 import React from "react";
 import ImageSlider from "./ImageSlider";
-// import { createPortal } from "react-dom";
-
+import { useState, useEffect } from "react";
 import SummaryUpper02 from "./SummaryUpper02";
 import SummaryUpper01 from "./SummaryUpper01";
 import SummaryUpper03 from "./SummaryUpper03";
 
 const SummaryUpper = () => {
 
-  // const imageEnlargedPortal = document.getElementById("overlays");
+  const [stickyClass, setStickyClass] = useState("");
+
+  useEffect(() => {
+    window.addEventListener("scroll", stickNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", stickNavbar);
+    };
+  }, []);
+
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 280
+        ? setStickyClass(
+            "sticky -top-10"
+          )
+        : setStickyClass("");
+    }
+  };
 
   return (
     <>
       <div className="lg:flex lg:justify-between relative">
         <div className="lg:w-[45%] mb-10 lg:mb-0">
+          <div className={stickyClass}>
           <ImageSlider />
+          </div>
+          
         </div>
-        {/* {createPortal(<div className="z-20 w-full" />, imageEnlargedPortal)} */}
-        {/* <div className="w-full z-20" id="qwerty"></div> */}
+       
         <div className="border border-slate-200 rounded-md lg:w-[50%] ">
           <div className="py-8 px-4">
             <SummaryUpper01 />
@@ -76,10 +96,10 @@ const SummaryUpper = () => {
                 </ul>
               </div>
               <div className="flex mt-6">
-                <button className="py-3 px-10 rounded-md border border-blue-500 mr-2 transition-all duration-300 hover:text-white hover:bg-slate-900">
+                <button className="py-3 px-6 0.8sm:px-10 rounded-md border border-blue-500 mr-2 transition-all duration-300 hover:text-white hover:bg-slate-900">
                   ADD TO CART
                 </button>
-                <button className="py-3 px-10 rounded-md border border-blue-500 text-white transition-all duration-300 hover:bg-slate-900 bg-blue-500">
+                <button className="py-3 px-6 0.8sm:px-10 rounded-md border border-blue-500 text-white transition-all duration-300 hover:bg-slate-900 bg-blue-500">
                   BUY NOW
                 </button>
               </div>

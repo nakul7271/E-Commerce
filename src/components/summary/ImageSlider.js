@@ -3,14 +3,19 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ImageSlider.css";
-import ReactImageMagnify from "react-image-magnify";
+import ImageZoom from "react-image-zooom";
+
 
 const ImageSlider = () => {
   const settings = {
     customPaging: function (i) {
       return (
         <a href="#">
-          <img alt="#" className="w-32" src={`images/detail/imageMan0${i+1}.jpg`} />
+          <img
+            alt="#"
+            className="w-32"
+            src={`images/detail/imageMan0${i + 1}.jpg`}
+          />
         </a>
       );
     },
@@ -40,38 +45,40 @@ const ImageSlider = () => {
   return (
     <div className="w-full">
       <Slider {...settings}>
-        <div className="">
-          <div >
-            <ReactImageMagnify
-              {...{
-                smallImage: {
-                  alt: "Wristwatch by Ted Baker London",
-                  isFluidWidth: true,
-                  src: "images/detail/imageMan001.jpg",
-                },
-                largeImage: {
-                  src: "images/detail/imageMan01.jpg",
-                  width: 1300,
-                  height: 1500,
-                },
-                enlargedImagePosition: "over",
-              }}
-            />
-          </div>
-
-          {/* <img alt="#" className="w-full" src="images/detail/imageMan01.jpg" /> */}
+        <div>
+        <ImageZoom
+          src="images/detail/imageMan01.jpg"
+          alt="A image to apply the ImageZoom plugin"
+          zoom="200"
+        />
         </div>
         <div>
-          <img alt="#" className="w-full" src="images/detail/imageMan02.jpg" />
+        <ImageZoom
+          src="images/detail/imageMan02.jpg"
+          alt="A image to apply the ImageZoom plugin"
+          zoom="200"
+        />
         </div>
         <div>
-          <img alt="#" className="w-full" src="images/detail/imageMan03.jpg" />
+        <ImageZoom
+          src="images/detail/imageMan03.jpg"
+          alt="A image to apply the ImageZoom plugin"
+          zoom="200"
+        />
         </div>
         <div>
-          <img alt="#" className="w-full" src="images/detail/imageMan04.jpg" />
+        <ImageZoom
+          src="images/detail/imageMan04.jpg"
+          alt="A image to apply the ImageZoom plugin"
+          zoom="200"
+        />
         </div>
         <div>
-          <img alt="#" className="w-full" src="images/detail/imageMan05.jpg" />
+        <ImageZoom
+          src="images/detail/imageMan05.jpg"
+          alt="A image to apply the ImageZoom plugin"
+          zoom="200"
+        />
         </div>
       </Slider>
     </div>

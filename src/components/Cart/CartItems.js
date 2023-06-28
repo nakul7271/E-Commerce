@@ -9,7 +9,7 @@ const CartItems = () => {
   const cartItemsArray = useSelector((state) => state.cart.cartItems);
 
   const tableRows = cartItemsArray.map((item) => {
-    return <CartItemsRow item={item} />;
+    return <CartItemsRow key={item.id} item={item} />;
   });
 
   return (

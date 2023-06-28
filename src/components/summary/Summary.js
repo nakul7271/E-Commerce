@@ -75,7 +75,7 @@ const Summary = () => {
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    class="w-4 h-4"
+                    className="w-4 h-4"
                   >
                     <path
                       strokeLinecap="round"
@@ -94,7 +94,7 @@ const Summary = () => {
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    class="w-4 h-4"
+                    className="w-4 h-4"
                   >
                     <path
                       strokeLinecap="round"
@@ -109,43 +109,43 @@ const Summary = () => {
                       <Slider ref={slider} {...settings}>
                 <Products
                   para="quadb men's regular fit solid cotton t-shirt (pack of 3)"
-                  prize1="₹2997"
-                  prize2="₹799"
+                  prize1={2997}
+                  prize2={799}
                   url1="images/men/manBLACK01.jpg"
                   url2="images/men/manBLACK02.jpg"
                 />
                 <Products
                   para="quadb men's regular fit solid cotton t-shirt (pack of 3)"
-                  prize1="₹2997"
-                  prize2="₹799"
+                  prize1={2997}
+                  prize2={799}
                   url1="images/men/manBLUE01.jpg"
                   url2="images/men/manBLUE02.jpg"
                 />
                 <Products
                   para="quadb men's regular fit solid cotton t-shirt (Best Available)"
-                  prize1="₹999"
-                  prize2="₹499"
+                  prize1={2997}
+                  prize2={799}
                   url1="images/men/manWHITE01.jpg"
                   url2="images/men/manWHITE02.jpg"
                 />
                 <Products
                   para="quadb men's regular fit solid cotton t-shirt (pack of 3)"
-                  prize1="₹2997"
-                  prize2="₹799"
+                  prize1={2997}
+                  prize2={799}
                   url1="images/t-shirts/t-shirtBLACK.jpg"
                   url2="images/men/manBLACK02.jpg"
                 />
                 <Products
                   para="quadb men's regular fit solid cotton t-shirt (pack of 3)"
-                  prize1="₹2997"
-                  prize2="₹799"
+                  prize1={2997}
+                  prize2={799}
                   url1="images/t-shirts/t-shirtBLUE.jpg"
                   url2="images/men/manBLUE02.jpg"
                 />
                 <Products
                   para="quadb men's regular fit solid cotton t-shirt (pack of 3)"
-                  prize1="₹2997"
-                  prize2="₹799"
+                  prize1={2997}
+                  prize2={799}
                   url1="images/t-shirts/t-shirtWHITE.jpg"
                   url2="images/men/manWHITE02.jpg"
                 />
